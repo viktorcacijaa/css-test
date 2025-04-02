@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspored Stranice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header ads"
+                "nav article article"
+                "nav footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 5px;
+            height: 100vh;
+        }
+        .header { grid-area: header; background-color: red; }
+        .ads { grid-area: ads; background-color: orange; }
+        .nav { grid-area: nav; background-color: rgb(31, 240, 255); }
+        .article { grid-area: article; background-color: green; }
+        .footer { grid-area: footer; background-color: blue; }
+        
+        div {
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="ads">Ads</div>
+        <div class="nav">Nav</div>
+        <div class="article">Article</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
